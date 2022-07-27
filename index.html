@@ -22,9 +22,6 @@
 <body>
 	<header class="header">
 		<div class="container">
-			<!-- <button class="menu-btn">
-				<span></span>
-			</button> -->
 			<div class="header__up">
 				<div class="header__left">
 					<div class="header__left-email">
@@ -52,10 +49,10 @@
 				<div class="menu__inner">
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a class="menu__link" href="#"> Главная</a>
+							<a class="menu__link" href="index.html"> Главная</a>
 						</li>
 						<li class=" menu__item">
-							<a class="menu__link" href="#"> О нас</a>
+							<a class="menu__link" href="about.html"> О нас</a>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#"> Услуги</a>
@@ -167,12 +164,14 @@
 		<section class="programs">
 			<div class="container">
 				<div class="programs__inner">
-					<p class="description">
-						Caption
-					</p>
-					<h2 class="title">
-						Программы и дополнительные услуги
-					</h2>
+					<div class="programs__first">
+						<p class="description">
+							Caption
+						</p>
+						<h2 class="title">
+							Программы и дополнительные услуги
+						</h2>
+					</div>
 					<div class="programs__content">
 						<a class="programs__item">
 							<div class="programs__item-text">
@@ -215,12 +214,14 @@
 		<section class="blog">
 			<div class="container">
 				<div class="blog__inner">
-					<p class="description">
-						Caption
-					</p>
-					<h2 class="title">
-						Блог
-					</h2>
+					<div class="blog__top">
+						<p class="description">
+							Caption
+						</p>
+						<h2 class="title">
+							Блог
+						</h2>
+					</div>
 				</div>
 				<div class="blog__content">
 					<div class="slider">
@@ -247,6 +248,26 @@
 						<li class="slider__item">
 							<img src="images/blog-3.jpg" alt="" class="slider__item-img">
 							<p class="slider__item-text">Как пережить расставание</p>
+							<div class="slider__item-content">
+								<p class="slider__item-date">
+									08.02.2022
+								</p>
+								<img src="images/arrow.svg" alt="" class="slider__item-arrow">
+							</div>
+						</li>
+						<li class="slider__item">
+							<img src="images/blog-1.jpg" alt="" class="slider__item-img">
+							<p class="slider__item-text">Любовь во времена ковида</p>
+							<div class="slider__item-content">
+								<p class="slider__item-date">
+									08.02.2022
+								</p>
+								<img src="images/arrow.svg" alt="" class="slider__item-arrow">
+							</div>
+						</li>
+						<li class="slider__item">
+							<img src="images/blog-2.jpg" alt="" class="slider__item-img">
+							<p class="slider__item-text">Уходя гасите свет! Почему мы так боимся остаться одни</p>
 							<div class="slider__item-content">
 								<p class="slider__item-date">
 									08.02.2022
@@ -291,12 +312,16 @@
 						<h5 class="footer__title">
 							Свяжитесь с нами
 						</h5>
-						<div class="footer__form">
-							<input class="email" type="text" placeholder="Email">
-							<a href=""><img src="images/arrow.svg" alt=""></a>
-						</div>
-						<p class="checkbox"><input type="checkbox">
-							Я согласен с <a>политикой конфиденциальности</a></p>
+						<form action="" class="form">
+							<div class="footer__form">
+								<input class="email" type="text" placeholder="Email">
+								<a href=""><img src="images/arrow.svg" alt=""></a>
+							</div>
+							<p class="checkbox">
+								<input type="checkbox" class="custom-checkbox" id="check" name="happy" value="yes">
+								<label for="check">Я согласен с <a>политикой конфиденциальности</a></label>
+							</p>
+						</form>
 						<div class="footer__contacts">
 							<div class="footer__contacts-phone">
 								<img src="images/phone.svg" alt="" class="footer__contacts-img">
