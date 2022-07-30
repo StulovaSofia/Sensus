@@ -40,9 +40,24 @@
 				<div class="header__rigth">
 					<a href="#" class="header__language">RU ▼</a>
 					<button class="header__button-1">
-						<a href="registered.html">Вход</a>
+						<a href="#zatemnenie">Вход</a>
 					</button>
 				</div>
+			</div>
+		</div>
+		<div class="inlet" id="zatemnenie">
+			<div class="inlet__inner" id="okno">
+				<h3 class="inlet__title">авторизация</h3>
+				<div class="inlet__input">
+					<input type="text" class="inlet__form" placeholder="Логин">
+					<input type="text" class="inlet__form" placeholder="Пароль">
+				</div>
+				<buuton class="inlet__btn">Войти</buuton>
+				<div class="inlet__text">
+					<a href="" class="inlet__link">У вас есть вопрос?</a>
+					<a href="" class="inlet__link">Регистрация</a>
+				</div>
+				<a href="#" class="close">╳</a>
 			</div>
 		</div>
 		<div class="menu">
@@ -168,6 +183,25 @@
 				</div>
 			</div>
 		</section>
+		<div class="team__two" id="zat2">
+			<div class="team__two-inner" id="okno2">
+				<div class="team__two-text">
+					<h3 class="team__two-title">
+						АРус
+					</h3>
+					<p class="team__two-description">Сооснователь Sensus в России и наш представитель по работе с агентствами
+						в Европе. Прежде чем прийти к
+						идее создания агентства знакомств, у Арус был довольно обширный опыт работы с людьми в разных сферах
+						от журналистики и преподавания до заключения важных бизнес-сделок. Арус как опытный специалист при
+						работе с клиентами Sensus смогла применить такие навыки как умение слушать, правильно интерпретировать
+						и добиваться необходимого результата. Кроме того, как представитель традиционной культуры, она
+						понимает важность тонкой многовековой традиции посредничества при создании пар.
+					</p>
+				</div>
+				<img src="images/team-1.jpg" alt="" class="team__two-img">
+				<a href="#" class="close">╳</a>
+			</div>
+		</div>
 		<section class="team">
 			<div class="container">
 				<div class="team__inner">
@@ -195,7 +229,7 @@
 								Сооснователь Sensus в России и наш представитель по работе с агентствами в Европе. Прежде чем
 								прийти к идее создания агентства знакомств...
 							</p>
-							<a class="team__link">
+							<a href="#zat2" class="team__link">
 								<p class="team__link-text">
 									Подробнее
 								</p>
@@ -214,7 +248,7 @@
 								Опытный профессионал в области знакомств. В течение многих лет она работала матчмейкером и
 								помогала успешным предпринимателям найти...
 							</p>
-							<a class="team__link">
+							<a href="#zat2" class="team__link">
 								<p class="team__link-text">
 									Подробнее
 								</p>
@@ -233,7 +267,7 @@
 								Сооснователь Sensus в Бразилии. Имеет опыт в разных сферах работы с людьми от участия в
 								организации больших международных мероприятий до...
 							</p>
-							<a class="team__link">
+							<a href="#zat2" class="team__link">
 								<p class="team__link-text">
 									Подробнее
 								</p>
@@ -282,10 +316,12 @@
 							<input class="email" type="text" placeholder="Email">
 							<a href=""><img src="images/arrow.svg" alt=""></a>
 						</div>
-						<p class="checkbox">
+						<div class="checkbox">
 							<input type="checkbox" class="custom-checkbox" id="check" name="happy" value="yes">
-							<label for="check">Я согласен с <a> политикой конфиденциальности</a></label>
-						</p>
+							<label for="check">
+								<p> Я согласен с <a> политикой конфиденциальности</a></p>
+							</label>
+						</div>
 					</form>
 					<div class="footer__contacts">
 						<div class="footer__contacts-phone">
