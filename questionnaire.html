@@ -83,19 +83,27 @@
 							<input type="text" class="form__email" placeholder="E-mail*">
 							<input type="text" class="form__num" placeholder="+7 (999) 999 - 99 - 99">
 							<div class="location">
-								<input type="text" class="form__country" placeholder="Страна*">
+								<div class="aa">
+									<input type="text" class="form__country" placeholder="Страна*">
+									<img class="img-arrow" src="images/arrow-down.svg" alt="">
+								</div>
 								<input type="text" class="form__sity" placeholder="Город">
 							</div>
 							<div class="children">
-								<input type="text" class="form__love" placeholder="Семейное положение*">
-								<label class="radio__decor">
-									<span class="custom-radio-btn"></span>
-									<input type="radio" class="form__children form__gender">Нет детей
-								</label>
-								<label>
-									<span class="custom-radio-btn"></span>
-									<input type="radio" class="form__children form__gender">Есть дети
-								</label>
+								<div class="aa">
+									<input type="text" class="form__love" placeholder="Семейное положение*">
+									<!-- <img class="img-arrow" src="images/arrow-down.svg" alt=""> -->
+								</div>
+								<div class="bb">
+									<label class="radio__decor">
+										<input name="radio" type="radio" class="radio" id="radio" />
+										<label for="radio">Нет детей</label>
+									</label>
+									<label class="radio__decor">
+										<input name="radio" type="radio" class="radio2" id="radio2" />
+										<label for="radio2">Есть дети</label>
+									</label>
+								</div>
 							</div>
 							<div>
 								<label>Ваше образование</label>

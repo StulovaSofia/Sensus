@@ -1289,12 +1289,11 @@ input {
 		margin-bottom: 40px;
 	}
 	&__country {
-		margin-right: 5px;
-		width: 48%;
+		margin-right: -16px;
+		width: 270px;
 	}
 
 	&__sity {
-		width: 48%;
 	}
 
 	&__text {
@@ -1721,11 +1720,6 @@ ol li:before {
 		font-size: 16px;
 		line-height: 24px;
 		margin-bottom: 3px;
-	}
-	.form__country,
-	.form__sity {
-		margin-right: 0px;
-		width: 100%;
 	}
 	.application__rigth {
 		width: 100%;
@@ -2159,6 +2153,12 @@ ol li:before {
 		align-items: center;
 	}
 }
+.location {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 .photo {
 	position: absolute;
 	left: 30px;
@@ -2387,18 +2387,15 @@ ol li:before {
 		margin-bottom: 32px;
 	}
 }
-
-.application {
-	&__rigth {
-	}
+.children {
+	display: flex;
+	gap: 40px;
+	flex-wrap: wrap;
+}
+.bb {
+	margin-left: 80px;
 }
 .form {
-	&__name {
-	}
-
-	&__email {
-	}
-
 	&__num {
 		background-color: transparent;
 		align-items: center;
@@ -2406,24 +2403,14 @@ ol li:before {
 		border-bottom: 1px solid #84694b;
 		margin-bottom: 40px;
 	}
-
-	&__country {
-	}
-
-	&__sity {
-	}
-
 	&__love {
 		background-color: transparent;
 		align-items: center;
 		padding-bottom: 10px;
 		border-bottom: 1px solid #84694b;
 		margin-bottom: 40px;
-		width: 50%;
+		width: 142%;
 		margin-right: 30px;
-	}
-
-	&__children {
 	}
 	&__university,
 	&__work {
@@ -2592,11 +2579,13 @@ ol li:before {
 		&__language,
 		&__me,
 		&__first,
-		&__relationships,
-		&__love {
+		&__relationships {
 			width: 100%;
 			padding-top: 10px;
 		}
+	}
+	.form__love {
+		margin-bottom: 6px;
 	}
 	.children {
 		margin-bottom: 25px;
@@ -3376,48 +3365,102 @@ ol li:before {
 		margin-bottom: 18px;
 	}
 }
-.custom-radio-btn {
-	position: relative; /* Родительский элемент*/
-	display: inline-block; /* Для применения рамок, размеров*/
+
+.radio {
+	vertical-align: top;
+	width: 17px;
+	height: 17px;
+	margin: 0 3px 0 0;
+}
+.radio + label {
+	cursor: pointer;
+}
+.radio:not(checked) {
+	position: absolute;
+	opacity: 0;
+}
+.radio:not(checked) + label {
+	position: relative;
+	padding: 0 0 0 20px;
+}
+.radio:not(checked) + label:before {
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 0;
 	width: 16px;
 	height: 16px;
 	background: rgba(190, 168, 142, 0.3);
 	border: 1px solid #84694b;
 	border-radius: 73px;
-	vertical-align: text-top; /* Выравнивание кнопки по центру*/
-	margin-right: 5px; /* Отступ между кнопкой и меткой*/
 }
-
-/* Рисуем внутренний круг */
-.custom-radio-btn::before {
+.radio:not(checked) + label:after {
 	content: "";
-	display: inline-block;
-	width: 8px;
-	height: 8px;
+	position: absolute;
+	top: 1px;
+	left: 0px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	opacity: 0;
+	transition: all 0.2s;
 	background: #84694b;
 	border: 1px solid rgba(190, 168, 142, 0.3);
 	border-radius: 73px;
-
-	/* Выравниваем по центру относительно внешнего круга */
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%) scale(0);
-
-	/* Плавный переход трансформации масштабирования */
-	transition: 0.2s ease-in;
 }
-.form__gender:checked + .custom-radio-btn::before {
-	transform: translate(-50%, -50%) scale(1);
+.radio:checked + label:after {
+	opacity: 1;
 }
-.form__gender {
-	/* Скрываем реальную радио кнопку*/
-	width: 0;
-	height: 0;
+// .radio:focus + label:before {
+// }
+
+.radio2 {
+	vertical-align: top;
+	width: 17px;
+	height: 17px;
+	margin: 0 3px 0 0;
+}
+.radio2 + label {
+	cursor: pointer;
+}
+.radio2:not(checked) {
 	position: absolute;
 	opacity: 0;
-	z-index: -1;
 }
+.radio2:not(checked) + label {
+	position: relative;
+	padding: 0 0 0 20px;
+}
+.radio2:not(checked) + label:before {
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 0;
+	width: 16px;
+	height: 16px;
+	background: rgba(190, 168, 142, 0.3);
+	border: 1px solid #84694b;
+	border-radius: 73px;
+}
+.radio2:not(checked) + label:after {
+	content: "";
+	position: absolute;
+	top: 1px;
+	left: 0px;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	opacity: 0;
+	transition: all 0.2s;
+	background: #84694b;
+	border: 1px solid rgba(190, 168, 142, 0.3);
+	border-radius: 73px;
+}
+.radio2:checked + label:after {
+	opacity: 1;
+}
+// .radio:focus + label:before {
+// }
 .radio__decor {
 	margin-right: 10px;
 }
@@ -3638,5 +3681,35 @@ ol li:before {
 	.payment__money {
 		display: block;
 		text-align: center;
+	}
+}
+@media (max-width: 650px) {
+	.form__country {
+		margin-right: -16px;
+		max-width: 509px;
+	}
+	.form__sity {
+		margin-right: 0px;
+		width: 100%;
+	}
+	.aa {
+		width: 100%;
+	}
+	.form__love {
+		max-width: 100%;
+	}
+	.children {
+		display: flex;
+		gap: 21px;
+		flex-wrap: wrap;
+	}
+	.bb {
+		margin: 15px 0;
+	}
+	.children {
+		display: block;
+	}
+	.form__country {
+		width: 100%;
 	}
 }
