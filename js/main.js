@@ -49,3 +49,20 @@ function changeBlock(numBlock) {
 	img = numBlock;
 	document.getElementById("img" + img).style.display = "block";
 }
+
+
+const chats = document.querySelectorAll('.chat__left-people');
+
+for (let i = 0; i < chats.length; i++) {
+	chats[i].addEventListener('click', function () {
+		chats[i].style.backgroundColor = 'rgba(190, 168, 142, 0.4)';
+		chats[i].style.borderLeft = '2px #53493E solid';
+		for (let j = 0; j < chats.length; j++) {
+			if (j !== i) {
+				chats[j].style.backgroundColor = '#FAF6EF';
+				chats[j].style.borderLeft = 'none';
+			}
+		}
+	}
+	);
+}
