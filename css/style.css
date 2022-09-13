@@ -3785,6 +3785,7 @@ ol li:before {
   gap: 8px;
   align-items: start;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .chat__right-img {
 	margin-left: 9px;
@@ -3822,7 +3823,7 @@ ol li:before {
   flex-direction: row;
   gap: 8px;
   align-items: start;
-  float: right;
+  justify-content: end;
   margin-right: 11px;
 }
 .chat__right-input {
